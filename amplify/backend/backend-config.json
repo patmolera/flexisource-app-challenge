@@ -1,6 +1,22 @@
 {
+  "api": {
+    "api11865744": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "appchallengeea1287ba"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
-    "appchallenge074e11a1": {
+    "appchallengeed5e683f": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -25,6 +41,31 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "appchallengeea1287ba": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_appchallengeea1287ba_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "appchallengeea1287ba"
+        }
+      ]
+    },
+    "AMPLIFY_function_appchallengeea1287ba_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "appchallengeea1287ba"
+        }
+      ]
     }
   }
 }

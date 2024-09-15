@@ -1,19 +1,29 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-appchallenge-dev-c8575-authRole",
-      "UnauthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-c8575-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-c8575-authRole",
+      "AuthRoleName": "amplify-appchallenge-dev-8e24f-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-8e24f-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-8e24f-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-appchallenge-dev-c8575-deployment",
-      "UnauthRoleName": "amplify-appchallenge-dev-c8575-unauthRole",
-      "StackName": "amplify-appchallenge-dev-c8575",
-      "StackId": "arn:aws:cloudformation:us-east-1:730335313743:stack/amplify-appchallenge-dev-c8575/e1496eb0-71da-11ef-9246-0ea540196039",
-      "AmplifyAppId": "ddweo90gb90cl"
+      "DeploymentBucketName": "amplify-appchallenge-dev-8e24f-deployment",
+      "UnauthRoleName": "amplify-appchallenge-dev-8e24f-unauthRole",
+      "StackName": "amplify-appchallenge-dev-8e24f",
+      "StackId": "arn:aws:cloudformation:us-east-1:730335313743:stack/amplify-appchallenge-dev-8e24f/85913c70-735f-11ef-a0b5-0e713079018b",
+      "AmplifyAppId": "d3obewnepuawce",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-appchallenge-dev-8e24f-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
-        "appchallenge074e11a1": {}
+        "appchallengeed5e683f": {}
+      },
+      "function": {
+        "appchallengeea1287ba": {
+          "deploymentBucketName": "amplify-appchallenge-dev-8e24f-deployment",
+          "s3Key": "amplify-builds/appchallengeea1287ba-38475568313676627743-build.zip"
+        }
+      },
+      "api": {
+        "api11865744": {}
       }
     }
   }

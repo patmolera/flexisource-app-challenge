@@ -6,9 +6,14 @@ const UserWidget = () => {
   return (
     <div style={{ position: 'absolute', top: '10px', right: '10px' }}>
       {user ? (
-        <div>
-          <p>Welcome, {user.username}</p>
-          <button onClick={signOut}>Sign Out</button>
+        <div className="bg-white rounded-lg border p-4 drop-shadow-md">
+          <p className="text-sm">
+            Welcome,{' '}
+            <span className="font-semibold">{user.signInDetails?.loginId}</span>
+          </p>
+          <button className="flex ml-auto text-sm" onClick={signOut}>
+            Sign Out
+          </button>
         </div>
       ) : null}
     </div>

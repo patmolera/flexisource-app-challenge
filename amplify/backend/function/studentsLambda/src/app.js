@@ -30,7 +30,7 @@ if (process.env.ENV && process.env.ENV !== 'NONE') {
 const userIdPresent = true; // TODO: update in case is required to use that definition
 const partitionKeyName = 'id';
 const partitionKeyType = 'S';
-const sortKeyName = 'id';
+const sortKeyName = 'first_name';
 const sortKeyType = 'S';
 const hasSortKey = sortKeyName !== '';
 const path = '/students';
@@ -68,6 +68,7 @@ app.get(path, async function (req, res) {
   var params = {
     TableName: tableName,
     Select: 'ALL_ATTRIBUTES',
+    ConsistentRead: true,
   };
 
   try {
@@ -261,8 +262,18 @@ app.delete(
     };
 
     try {
-      let data = await ddbDocClient.send(new DeleteCommand(removeItemParams));
-      res.json({ url: req.url, data: data });
+      await ddbDocClient.send(new DeleteCommand(removeItemParams));
+      const remainingItems = await ddbDocClient.send(
+        new ScanCommand({
+          TableName: tableName,
+          Select: 'ALL_ATTRIBUTES',
+          ConsistentRead: true,
+        })
+      );
+
+      res.json({ success: true, data: remainingItems.Items });
+
+      // res.json({ url: req.url, data: data });
     } catch (err) {
       res.statusCode = 500;
       res.json({ error: err, url: req.url });

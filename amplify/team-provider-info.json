@@ -19,7 +19,7 @@
       "function": {
         "studentsLambda": {
           "deploymentBucketName": "amplify-appchallenge-dev-fed6e-deployment",
-          "s3Key": "amplify-builds/studentsLambda-712b75364b546658764e-build.zip"
+          "s3Key": "amplify-builds/studentsLambda-344a5241704f3571564c-build.zip"
         }
       },
       "storage": {

@@ -1,0 +1,14 @@
+{
+  "resourceName": "studentsdb",
+  "tableName": "studentsdb",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "sortKey": {
+    "fieldName": "first_name",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

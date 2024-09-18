@@ -1,6 +1,6 @@
 {
   "api": {
-    "api11865744": {
+    "studentsApi": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "appchallengeea1287ba"
+          "resourceName": "studentsLambda"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -16,7 +16,7 @@
     }
   },
   "auth": {
-    "appchallengeed5e683f": {
+    "appchallengea83b4eca": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -44,28 +44,48 @@
     }
   },
   "function": {
-    "appchallengeea1287ba": {
+    "studentsLambda": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "studentsdb"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_appchallengeea1287ba_deploymentBucketName": {
+    "AMPLIFY_function_studentsLambda_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "appchallengeea1287ba"
+          "resourceName": "studentsLambda"
         }
       ]
     },
-    "AMPLIFY_function_appchallengeea1287ba_s3Key": {
+    "AMPLIFY_function_studentsLambda_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "appchallengeea1287ba"
+          "resourceName": "studentsLambda"
         }
       ]
+    }
+  },
+  "storage": {
+    "studentsdb": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }

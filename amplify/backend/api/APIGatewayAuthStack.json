@@ -11,7 +11,7 @@
     "env": {
       "Type": "String"
     },
-    "api11865744": {
+    "studentsApi": {
       "Type": "String"
     }
   },
@@ -52,7 +52,7 @@
                       },
                       ":",
                       {
-                        "Ref": "api11865744"
+                        "Ref": "studentsApi"
                       },
                       "/",
                       {
@@ -82,7 +82,7 @@
                       },
                       ":",
                       {
-                        "Ref": "api11865744"
+                        "Ref": "studentsApi"
                       },
                       "/",
                       {

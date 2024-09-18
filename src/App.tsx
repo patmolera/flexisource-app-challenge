@@ -29,33 +29,35 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
 
 const App: React.FC = () => {
   return (
-    <Authenticator>
-      <Router>
-        <UserWidget />
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-
-          {/* Protected Routes */}
-          <Route
-            path="/students"
-            element={
-              <ProtectedRoute>
-                <DisplayStudent />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/create-student"
-            element={
-              <ProtectedRoute>
-                <CreateStudent />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/" element={<Navigate to="/students" />} />
-        </Routes>
-      </Router>
-    </Authenticator>
+    <>
+      <div className="flex items-center w-full justify-center h-screen">
+        <Authenticator>
+          <Router>
+            <UserWidget />
+            <Routes>
+              {/* Protected Routes */}
+              <Route
+                path="/students"
+                element={
+                  <ProtectedRoute>
+                    <DisplayStudent />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/create-student"
+                element={
+                  <ProtectedRoute>
+                    <CreateStudent />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="*" element={<Navigate to="/students" />} />
+            </Routes>
+          </Router>
+        </Authenticator>
+      </div>
+    </>
   );
 };
 

@@ -3,7 +3,7 @@
   "paths": {
     "/students": {
       "name": "/students",
-      "lambdaFunction": "appchallengeea1287ba",
+      "lambdaFunction": "studentsLambda",
       "permissions": {
         "setting": "private",
         "auth": [

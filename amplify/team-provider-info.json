@@ -1,29 +1,32 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-appchallenge-dev-8e24f-authRole",
-      "UnauthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-8e24f-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-8e24f-authRole",
+      "AuthRoleName": "amplify-appchallenge-dev-fed6e-authRole",
+      "UnauthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-fed6e-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::730335313743:role/amplify-appchallenge-dev-fed6e-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-appchallenge-dev-8e24f-deployment",
-      "UnauthRoleName": "amplify-appchallenge-dev-8e24f-unauthRole",
-      "StackName": "amplify-appchallenge-dev-8e24f",
-      "StackId": "arn:aws:cloudformation:us-east-1:730335313743:stack/amplify-appchallenge-dev-8e24f/85913c70-735f-11ef-a0b5-0e713079018b",
-      "AmplifyAppId": "d3obewnepuawce",
-      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-appchallenge-dev-8e24f-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+      "DeploymentBucketName": "amplify-appchallenge-dev-fed6e-deployment",
+      "UnauthRoleName": "amplify-appchallenge-dev-fed6e-unauthRole",
+      "StackName": "amplify-appchallenge-dev-fed6e",
+      "StackId": "arn:aws:cloudformation:us-east-1:730335313743:stack/amplify-appchallenge-dev-fed6e/2e24aa40-756b-11ef-a65f-12c8551767ed",
+      "AmplifyAppId": "d2a4vb8wrzm74v",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-appchallenge-dev-fed6e-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
-        "appchallengeed5e683f": {}
+        "appchallengea83b4eca": {}
       },
       "function": {
-        "appchallengeea1287ba": {
-          "deploymentBucketName": "amplify-appchallenge-dev-8e24f-deployment",
-          "s3Key": "amplify-builds/appchallengeea1287ba-38475568313676627743-build.zip"
+        "studentsLambda": {
+          "deploymentBucketName": "amplify-appchallenge-dev-fed6e-deployment",
+          "s3Key": "amplify-builds/studentsLambda-62447447567a59704e68-build.zip"
         }
       },
+      "storage": {
+        "studentsdb": {}
+      },
       "api": {
-        "api11865744": {}
+        "studentsApi": {}
       }
     }
   }

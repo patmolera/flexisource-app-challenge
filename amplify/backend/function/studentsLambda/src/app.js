@@ -30,7 +30,7 @@ if (process.env.ENV && process.env.ENV !== 'NONE') {
 const userIdPresent = true; // TODO: update in case is required to use that definition
 const partitionKeyName = 'id';
 const partitionKeyType = 'S';
-const sortKeyName = 'first_name';
+const sortKeyName = 'id';
 const sortKeyType = 'S';
 const hasSortKey = sortKeyName !== '';
 const path = '/students';
